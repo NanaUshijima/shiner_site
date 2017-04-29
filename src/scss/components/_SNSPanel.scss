@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.SNSPanel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -($menu-height);
+  padding-top: $menu-height;
+  margin-bottom: $space-height;
+
+  &__body {
+    margin: 100px 0;
+
+  }
+}

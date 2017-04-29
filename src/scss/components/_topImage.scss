@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+.TopImage {
+  padding-top: $menu-height;
+  position: relative;
+  height: $menu-height + $top-image-height;
+
+  &__main {
+    background-image: url(../../../dist/images/top/top_image03.jpg);
+    width: 100%;
+    height: $top-image-height;
+    background-size: cover;
+    background-color: $color-yellow;
+    position: relative;
+  }
+
+  &__sub {
+    position: absolute;
+    color: white;
+    border-color: white;
+    top: 40%;
+    left: 40%;
+    animation: show 3s both;
+    border: solid 2px;
+    padding: 30px 50px;
+    overflow: hidden;
+    // transform: rotate(-20deg);
+    p {
+      color: white;
+      font-size: 40px;
+      overflow: hidden;
+      animation: show 3s both;
+    }
+
+    .word1 {
+      animation-delay: 2s;
+    }
+
+    .word2 {
+      animation-delay: 4s;
+    }
+  }
+
+
+
+}
+
+@keyframes show {
+    0% {
+        -webkit-transform: translate(0, 200px);
+        -ms-transform: translate(0, 200px);
+        transform: translate(0, 200px);
+        opacity: 0;
+    }
+    70% {
+        opacity: 0.3;
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}

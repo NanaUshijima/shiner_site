@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.Label {
+  display: flex;
+  height: 150px;
+  width: 100%;
+  align-items: center;
+  justify-content: left;
+
+  &__body {
+    font-size: 20px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-align: left;
+    letter-spacing: 2px;
+    color: $color-black;
+    margin-left: 10%;
+    border-bottom: 2px solid $color-black;
+  }
+}

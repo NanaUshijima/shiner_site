@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.contents {
+    width: 100%;
+    margin: 0px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-l-gray;
+
+}
+
+.wrap {
+  background-color: $color-l-gray;
+}
+
+.list-mv {
+    opacity: 0;
+    transform: translate(0, 60px);
+    -webkit-transform: translate(0, 60px);
+    transition: .8s;
+}
+
+.mv {
+    opacity: 1.0;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+}

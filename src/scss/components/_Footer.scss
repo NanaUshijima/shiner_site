@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.Footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: $color-black;
+  color: $color-l-gray;
+
+  &__head {
+    p {
+      font-size: 18px;
+      color: white;
+    }
+
+    ul {
+    display: flex;
+    flex-direction: column;
+    }
+  }
+
+  &__body {
+    p {
+    color: $color-l-gray;
+  }
+    }
+  }

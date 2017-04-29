@@ -1,0 +1,617 @@
+* {}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('font-awesome-4.7.0/fonts/fontawesome-webfont.eot?v=4.4.0');
+    src: url('font-awesome-4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('font-awesome-4.7.0/fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'), url('font-awesome-4.7.0/fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('font-awesome-4.7.0/fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0px;
+}
+
+
+/*スクロールの動きのCSS*/
+
+
+.list-mv {
+    opacity: 0;
+    transform: translate(0, 60px);
+    -webkit-tran_sform: translate(0, 60px);
+    transition: .8s;
+}
+
+.mv {
+    opacity: 1.0;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+}
+
+#home {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TopImage__sub {
+    border: 2px solid;
+    padding: 20px 25px;
+    border-color: white;
+    overflow: hidden;
+}
+
+.Header__head {
+    display: none;
+}
+
+.appear {
+    animation: show 3s both;
+}
+
+#home p {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+.word1 {
+    animation-delay: 2s;
+}
+
+.word2 {
+    animation-delay: 4s;
+}
+
+@keyframes show {
+    0% {
+        -webkit-transform: translate(0, 200px);
+        -ms-transform: translate(0, 200px);
+        transform: translate(0, 200px);
+        opacity: 0;
+    }
+    70% {
+        opacity: 0.3;
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+#navToggle {
+    display: none;
+    /*通常時は非表示にしておきます*/
+    position: fixed;
+    /*bodyに対しての絶対位置指定です*/
+    left: 10px;
+    top: 10px;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+/*#navToggle div {
+    position: relative;
+}*/
+
+
+/*spanの絶対位置指定の親にします*/
+
+#navToggle span {
+    display: block;
+    position: absolute;
+    /*#navToggle div に対して*/
+    width: 100%;
+    border-bottom: solid 3px white;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+}
+
+#navToggle span:nth-child(1) {
+    top: 0
+}
+
+#navToggle span:nth-child(2) {
+    top: 11px
+}
+
+#navToggle span:nth-child(3) {
+    top: 22px
+}
+
+header ul li {
+    list-style-type: none;
+    margin-left: -20px;
+}
+.Header__body ul {
+  padding: 0;
+}
+
+.Header__body a {
+    color: rgba(240, 236, 112, 1);
+    display: block;
+    margin: 15px 0px;
+    padding: 0px 5px;
+    text-decoration: none;
+    font-size: 40px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+header nav {
+    position: fixed;
+    display: flex;
+    /*bodyに対しての絶対位置*/
+    right: 0;
+    top: -100vh;
+    /*通常時はビュー外*/
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 1);
+    width: 100%;
+    height: 100vh;
+    -webkit-transition: .5s ease-in-out;
+    /*transitionで動きを*/
+    -moz-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    text-align: center;
+    z-index: 1;
+}
+
+
+/*display:noneだったボタンを display:blockにして表示します*/
+
+#navToggle {
+    display: block;
+}
+
+
+/* Click Toggle(Button) */
+
+
+/*ここから jQueryで header要素に付けた「.openNav」を利用します*/
+
+
+/*.openNavが付いた要素内のボタン（#navToggle）内のspanへの指定*/
+
+
+/*最初のspanをマイナス45度に*/
+
+.openNav #navToggle span:nth-child(1) {
+    top: 11px;
+    border-color: rgba(240, 236, 112, 1);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+
+/*2番目と3番目のspanを45度に*/
+
+.openNav #navToggle span:nth-child(2), .openNav #navToggle span:nth-child(3) {
+    top: 11px;
+    border-color: rgba(240, 236, 112, 1);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+
+/*header menu*/
+
+
+/*.openNavが付いた要素の中のnavを 縦方向に351px移動（=表示される）*/
+
+.openNav nav {
+    -moz-transform: translateY(100vh);
+    -webkit-transform: translateY(100vh);
+    transform: translateY(100vh);
+}
+
+.wrap {
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#about, #info, #staff, #twitter {
+    padding: 2% 10%;
+}
+
+
+/*以下背景色について*/
+
+
+/*背景の斜めのつなぎを作る*/
+
+.background-home {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(-200deg, rgb(240, 236, 112) 50%, rgb(31, 48, 137) 50%, rgb(31, 48, 137));
+}
+
+.Label__body {
+    font-size: 30px;
+    margin: 10px 100px;
+    text-align: center;
+    border-bottom: 2px solid;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: white;
+}
+
+#about {
+    /*background-color: rgb(31, 48, 137);*/
+    background-color: #3d4799;
+}
+
+.OverPanel__body {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about h1 {
+    padding-top: 50px;
+}
+
+.speech {
+    text-align: center;
+    font-size: 80px;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    -webkit-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    line-height: 110%;
+    margin-bottom: 80px;
+}
+
+.speech span {
+    color: red;
+}
+
+.introduction {
+    margin: 0 30px;
+    text-align: left;
+    line-height: 180%;
+    color: white;
+    font-size: 12px;
+    font-family: "Noto Sans Japanese";
+}
+
+.background-about {
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(-200deg, #3d4799 50%, #d8757d 50%, #d8757d);
+}
+
+#info {
+    background-color: #d8757d;
+}
+
+
+/*#info i::before{
+  color: white;
+  flex: 1;
+}*/
+
+.info_content1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.info_content2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.bag {
+    display: flex;
+    width: 100%;
+    margin-top: 80px;
+    padding-bottom: 10px;
+    background-color: #413f3f;
+    border-radius: 5%;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bag::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: #413f3f solid 20px;
+    top: -70px;
+    left: 50%;
+    -webkit-transform: translate(-70px, 0);
+    -ms-transform: translate(-70px, 0);
+    transform: translate(-70px, 0);
+}
+
+#info i {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+#info .fa-suitcase {
+  display: none;
+}
+
+p.when {
+    color: white;
+    font-size: 35px;
+    font-family: "Noto Sans Japanese";
+    text-align: left;
+    padding: 0px;
+    margin-left: 10px;
+    flex: 3;
+}
+
+p.place {
+    color: white;
+    font-size: 30px;
+    font-family: "Noto Sans Japanese";
+    text-align: left;
+    margin-left: 10px;
+    /*margin: 20px 10px 20px 10px;*/
+    flex: 3;
+}
+
+p.place span {
+    font-size: 17px;
+    color: white;
+    font-family: "Noto Sans Japanese";
+}
+
+#info h3 {
+    color: white;
+    font-size: 13px;
+    font-family: "Noto Sans Japanese";
+    font-weight: 100;
+    margin: 10px 0px 0px 0px;
+    width: 100%;
+    text-align: center;
+}
+
+#info ul {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: 10%;
+}
+
+#info ul li {
+    width: 50%;
+    padding: 10px 0;
+    color: white;
+    font-size: 20px;
+    font-family: "Noto Sans Japanese";
+}
+
+.background-info {
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(-200deg, #d8757d 50%, #7f7f7f 50%, #7f7f7f);
+}
+
+/*.background-info {
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(-200deg, #7f7f7f 50%, #7f7f7f 50%, #7f7f7f);
+}*/
+
+#contents {
+  background-color: #7f7f7f;
+}
+
+.IconPanel__body {
+
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.IconPanel__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0;
+}
+
+#contents img {
+  width: 20%;
+  margin-right: 30px;
+}
+
+#contents p {
+  font-size: 9px;
+  line-height: 180%;
+  color: white;
+}
+
+.background-contents {
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(-200deg, #7f7f7f 50%, #65c1d8 50%, #65c1d8);
+}
+
+#staff {
+    /*background-color: rgb(115, 240, 227);*/
+    background-color: #65c1d8;
+}
+
+.PicPanel__intro {
+  font-size: 10px;
+  line-height: 200%;
+  color: white;
+  margin: 80px 15% 0 15%;
+
+}
+
+.PicPanel__intro span {
+  color: #5f5f5f;
+}
+
+.PicPanel__body {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0px;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.ibunka, .tiiki, .jyokomyu, .gendai {
+    width: 44%;
+    margin: 1%;
+    border: solid 3px;
+    text-align: center;
+    border-color: white;
+    border-radius: 10%;
+}
+
+.ibunka {
+    background-color: #20b3d8;
+}
+
+.tiiki {
+    background-color: #20b3d8;
+}
+
+.jyokomyu {
+    background-color: #20b3d8;
+}
+
+.gendai {
+    background-color: #20b3d8;
+}
+
+img.human {
+    width: 80%;
+    margin-top: 5%;
+}
+
+.PicPanel__body a {
+    display: block;
+    text-decoration: none;
+    font-size: 180%;
+    color: white;
+    font-family: "Nico Moji";
+    margin-bottom: 25px;
+}
+
+.PicPanel__body p {
+    margin: 10px 0;
+}
+
+.modal-close {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.member {
+    height: 50%;
+    width: 40%;
+}
+
+.background-staff {
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(-200deg, #65c1d8 50%, #d8d465 50%, #d8d465);
+}
+
+#twitter {
+    background-color: #d8d465;
+    padding-bottom: 30%;
+}
+
+#twitter h1 {
+    margin-bottom: 20%;
+}
+
+
+/*twitter中央寄せ*/
+
+.twitter-box {
+    display: flex;
+    justify-content: center;
+}
+
+.creator {
+    background-color: gray;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 11px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.Footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #2f2f2f;
+    color: #f3f3f3;
+}
+
+.Footer__head p {
+    font-size: 13px;
+    color: white;
+}
+
+.Footer ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.Footer li {
+  list-style: none;
+}
+
+.Footer a{
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #f3f3f3;
+  text-decoration: none;
+}
+.Footer__body p {
+    color: #f3f3f3;
+}

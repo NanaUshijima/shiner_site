@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+.OverPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: -($menu-height);
+  padding-top: $menu-height;
+  margin-bottom: $space-height;
+
+  &__head {
+
+  }
+
+  &__body {
+    margin: 0 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h1 {
+
+      text-align: center;
+      font-size: 50px;
+      color: $color-blue;
+      font-family: 'Pacifico', cursive;
+      -webkit-transform: rotate(-20deg);
+      -ms-transform: rotate(-20deg);
+      transform: rotate(-20deg);
+      line-height: 110%;
+      margin: 50px;
+      span {
+        font-family: 'Pacifico', cursive;
+        color: red;
+      }
+    }
+
+    p{
+      margin-left: 5%;
+      text-align: left;
+      color: $color-blue;
+      padding: 60px;
+      font-size: 11px;
+      line-height: 200%;
+    }
+
+  }
+}

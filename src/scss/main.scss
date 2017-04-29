@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+//基本設定読み込み
+@import "./base/variables";
+
+//リセットcss読み込み
+@import "./base/reset";
+
+* {
+  color: $color-black;
+  font-family: 'Noto Sans Japanese';
+}
+
+@import "./components/common/header";
+
+@import "./components/common/menu";
+//topimage読み込み
+@import "./components/topImage";
+//aboutパーツ読み込み
+@import "./components/OverPanel";
+//infoパーツ読み込み
+@import "./components/InfoPanel";
+//staffパーツ読み込み
+@import "./components/picPanel";
+//contentsパーツ読み込み
+@import "./components/iconPanel";
+//snsパネル読み込み
+@import "./components/SNSPanel";
+//フッター読み込み
+@import "./components/Footer";
+
+//layout読み込み
+@import "./components/parts/layouts";
+//label読み込み
+@import "./components/parts/labels";
+//吹き出し読み込み
+@import "./components/parts/arrow";
