@@ -24,7 +24,7 @@
 
 .remodal-wrapper {
     padding: 10px 10px 0;
-    
+
 }
 
 .question {
@@ -45,7 +45,7 @@
     box-sizing: border-box;
     width: 100%;
     height: 80%;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
     /*padding: 10px;*/
     -webkit-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
@@ -75,7 +75,6 @@
     flex-wrap: wrap;
     justify-content: center;
     /*flex-direction: row;*/
-    height: 95%;
     width: 100%;
     overflow: scroll;
 }
@@ -99,14 +98,19 @@
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     color: rgb(100, 100, 100);
-    top: 10%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .member {
     /*display: inline-table;*/
     display: block;
     justify-content: center;
-
+    width: 42%;
     margin: 2%;
     overflow: hidden;
     padding: 0px;

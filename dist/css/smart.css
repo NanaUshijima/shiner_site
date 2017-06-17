@@ -156,7 +156,7 @@ header ul li {
     margin: 15px 0px;
     padding: 0px 5px;
     text-decoration: none;
-    font-size: 40px;
+    font-size: 10vw;
     text-align: center;
     font-family: 'Ubuntu Condensed', sans-serif;
 }
@@ -240,8 +240,8 @@ header ul li {
     flex-direction: column;
 }
 
-#about, #info, #staff, #twitter {
-    padding: 2% 10%;
+.OverPanel__body, .InfoPanel__body, .PicPanel__intro, .SNSPanel__body {
+    margin: 2% 10%;
 }
 
 
@@ -254,7 +254,7 @@ header ul li {
     position: relative;
     width: 100%;
     height: 200px;
-    background-image: linear-gradient(-200deg, rgb(240, 236, 112) 50%, rgb(31, 48, 137) 50%, rgb(31, 48, 137));
+    background-image: linear-gradient(-193deg, rgb(240, 236, 112) 50%, rgb(31, 48, 137) 50%, rgb(31, 48, 137));
 }
 
 .Label__body {
@@ -286,14 +286,14 @@ header ul li {
 
 .speech {
     text-align: center;
-    font-size: 80px;
+    font-size: 22vw;
     color: white;
     font-family: 'Pacifico', cursive;
     -webkit-transform: rotate(-20deg);
     -ms-transform: rotate(-20deg);
     transform: rotate(-20deg);
     line-height: 110%;
-    margin-bottom: 80px;
+    margin-bottom: 25%;
 }
 
 .speech span {
@@ -301,24 +301,30 @@ header ul li {
 }
 
 .introduction {
-    margin: 0 30px;
+    margin: 0 17%;
     text-align: left;
-    line-height: 180%;
+    line-height: 200%;
     color: white;
-    font-size: 12px;
+    font-size: 3vw;
     font-family: "Noto Sans Japanese";
 }
 
 .background-about {
     width: 100%;
     height: 200px;
-    background-image: linear-gradient(-200deg, #3d4799 50%, #d8757d 50%, #d8757d);
+    background-image: linear-gradient(-193deg, #3d4799 50%, #d8757d 50%, #d8757d);
 }
 
 #info {
     background-color: #d8757d;
 }
 
+.InfoPanel__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /*#info i::before{
   color: white;
@@ -349,10 +355,11 @@ header ul li {
     margin-top: 80px;
     padding-bottom: 10px;
     background-color: #413f3f;
-    border-radius: 5%;
+    border-radius: 20px;
     position: relative;
     flex-direction: column;
     align-items: center;
+    max-width: 550px;
 }
 
 .bag::before {
@@ -382,7 +389,7 @@ header ul li {
 
 p.when {
     color: white;
-    font-size: 35px;
+    font-size: 8vw;
     font-family: "Noto Sans Japanese";
     text-align: left;
     padding: 0px;
@@ -392,7 +399,7 @@ p.when {
 
 p.place {
     color: white;
-    font-size: 30px;
+    font-size: 8vw;
     font-family: "Noto Sans Japanese";
     text-align: left;
     margin-left: 10px;
@@ -401,7 +408,7 @@ p.place {
 }
 
 p.place span {
-    font-size: 17px;
+    font-size: 5vw;
     color: white;
     font-family: "Noto Sans Japanese";
 }
@@ -427,20 +434,20 @@ p.place span {
     width: 50%;
     padding: 10px 0;
     color: white;
-    font-size: 20px;
+    font-size: 5vw;
     font-family: "Noto Sans Japanese";
 }
 
 .background-info {
     width: 100%;
     height: 200px;
-    background-image: linear-gradient(-200deg, #d8757d 50%, #7f7f7f 50%, #7f7f7f);
+    background-image: linear-gradient(-193deg, #d8757d 50%, #7f7f7f 50%, #7f7f7f);
 }
 
 /*.background-info {
     width: 100%;
     height: 200px;
-    background-image: linear-gradient(-200deg, #7f7f7f 50%, #7f7f7f 50%, #7f7f7f);
+    background-image: linear-gradient(-193deg, #7f7f7f 50%, #7f7f7f 50%, #7f7f7f);
 }*/
 
 #contents {
@@ -476,7 +483,7 @@ p.place span {
 .background-contents {
     width: 100%;
     height: 200px;
-    background-image: linear-gradient(-200deg, #7f7f7f 50%, #65c1d8 50%, #65c1d8);
+    background-image: linear-gradient(-193deg, #7f7f7f 50%, #65c1d8 50%, #65c1d8);
 }
 
 #staff {
@@ -485,7 +492,7 @@ p.place span {
 }
 
 .PicPanel__intro {
-  font-size: 10px;
+  font-size: 3vw;
   line-height: 200%;
   color: white;
   margin: 80px 15% 0 15%;
@@ -500,14 +507,13 @@ p.place span {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin: 0px;
     justify-content: center;
     margin-top: 70px;
     margin-bottom: 50px;
 }
 
 .ibunka, .tiiki, .jyokomyu, .gendai {
-    width: 44%;
+    width: 40%;
     margin: 1%;
     border: solid 3px;
     text-align: center;
@@ -526,7 +532,7 @@ img.human {
 .PicPanel__body a {
     display: block;
     text-decoration: none;
-    font-size: 180%;
+    font-size: 8vw;
     color: white;
     font-family: "Nico Moji";
     margin-bottom: 25px;
@@ -540,7 +546,7 @@ img.human {
 .background-staff {
     width: 100%;
     height: 200px;
-    background-image: linear-gradient(-200deg, #65c1d8 50%, #d8d465 50%, #d8d465);
+    background-image: linear-gradient(-193deg, #65c1d8 50%, #d8d465 50%, #d8d465);
 }
 
 #twitter {
@@ -599,7 +605,10 @@ img.human {
   letter-spacing: 2px;
   color: #f3f3f3;
   text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
 }
 .Footer__body p {
     color: #f3f3f3;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 1px;
 }
